@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  zookeeper:
+    build: ./zookeeper
+    network_mode: host
+    ports:
+      - 2181:2181
+  kafka:
+    build: ./kafka
+    network_mode: host
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    ports:
+      - 9092:9092
