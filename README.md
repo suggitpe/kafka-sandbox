@@ -11,6 +11,10 @@
  - `docker-compose run kafka` # run kafka in the foreground
  - `docker-compose up -d` # run all in the background
 
+## Get on the cluster
+ - SSH to container: `docker exec -it kafkasandbox_kafka_1 /bin/bash`
+ - Tail logs: `docker logs -f kafkasandbox_kafka_1` and `docker logs -f kafkasandbox_zookeeper_1`
+
 ## Kafka stuff
 All these are based on being ssh'd onto the kafka container
  - `./kafka-topics.sh --list --zookeeper localhost:2181` # list all the topics
