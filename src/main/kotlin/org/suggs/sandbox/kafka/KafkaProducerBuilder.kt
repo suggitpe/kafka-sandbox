@@ -9,6 +9,12 @@ class KafkaProducerBuilder {
 
     private val properties = Properties()
 
+    init {
+        properties[ProducerConfig.ACKS_CONFIG] = "all"
+        properties[ProducerConfig.RETRIES_CONFIG] = 0
+        properties[ProducerConfig.LINGER_MS_CONFIG] = 1
+    }
+
     companion object {
         fun aKafkaProducer(): KafkaProducerBuilder {
             return KafkaProducerBuilder()
