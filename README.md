@@ -17,6 +17,7 @@
 
 ## Kafka stuff
 All these are based on being ssh'd onto the kafka container
+ - `cd /opt/kafka*/bin`
  - `./kafka-topics.sh --list --zookeeper localhost:2181` # list all the topics
  - `./kafka-topics.sh --zookeeper localhost:2181 --create --replication-factor 1 --partitions 1 --topic test` # create a test topic called test
  - `./kafka-topics.sh --describe --zookeeper localhost:2181 --topic test` # describe the topic
