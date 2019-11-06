@@ -13,6 +13,9 @@ ext {
             slf4j        : 'org.slf4j:slf4j-api:1.7.28',
             logback      : 'ch.qos.logback:logback-classic:1.2.3',
 
+            jacksonDatatypeJsr310     : 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9',
+            jacksonKotlin             : 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.9',
+
             test         : [
                     junitApi   : 'org.junit.jupiter:junit-jupiter-api:5.5.2',
                     junitEngine: 'org.junit.jupiter:junit-jupiter-engine:5.5.2',

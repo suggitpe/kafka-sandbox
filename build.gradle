@@ -27,7 +27,8 @@ dependencies {
             libs.kotlinReflect,
             libs.kafkaClients,
             libs.kafkaStreams,
-            libs.slf4j
+            libs.slf4j,
+            libs.jacksonKotlin
 
 
     testImplementation libs.test.junitApi,

@@ -20,8 +20,8 @@ class KafkaConsumerBuilder {
         return this
     }
 
-    fun knownAs(clientName: String): KafkaConsumerBuilder {
-        properties[GROUP_ID_CONFIG] = clientName
+    fun knownAs(clientGroupName: String): KafkaConsumerBuilder {
+        properties[GROUP_ID_CONFIG] = clientGroupName
         return this
     }
 
