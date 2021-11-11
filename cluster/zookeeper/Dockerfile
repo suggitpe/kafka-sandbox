@@ -1,4 +1,4 @@
-FROM suggitpe/19.04-openjdk11-base
+FROM suggitpe/21.10-openjdk11-base
 
 ENV DEBIAN_FRONTEND=noninteractive
 
