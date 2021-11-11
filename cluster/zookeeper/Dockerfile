@@ -7,9 +7,9 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
 
-ENV ZOOKEEPER_VERSION=3.4.14
+ENV ZOOKEEPER_VERSION=3.7.0
 ENV ZOOKEEPER_HOME=/opt/zookeeper-${ZOOKEEPER_VERSION}
-ENV ZOOKEEPER_DOWNLOAD_URL=http://mirrors.ukfast.co.uk/sites/ftp.apache.org/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/zookeeper-${ZOOKEEPER_VERSION}.tar.gz
+ENV ZOOKEEPER_DOWNLOAD_URL=http://mirrors.ukfast.co.uk/sites/ftp.apache.org/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/apache-zookeeper-${ZOOKEEPER_VERSION}.tar.gz
 ENV ZOOKEEPER_TMP=/tmp/zookeeper-${ZOOKEEPER_VERSION}.tgz
 
 RUN echo "Installing Zookeeper from ${ZOOKEEPER_DOWNLOAD_URL}" && \
