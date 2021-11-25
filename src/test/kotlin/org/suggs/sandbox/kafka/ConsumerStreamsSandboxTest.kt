@@ -26,7 +26,7 @@ class ConsumerStreamsSandboxTest {
     @Test fun `consumes from kafka as json from a stream`() {
 
         val personJsonStream = streamsBuilder.stream<String, String>(topic, Consumed.with(Serdes.String(), Serdes.String()))
-        val personStream: KStream<String, String> = personJsonStream.mapValues { it -> mapper.readValue(it, Person::class.java) }
+        val personStream = personJsonStream.mapValues { it -> mapper.readValue(it, Person::class.java) }
         val resStream = personStream.map { _, p ->
             val birthDate = p.birthDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
             KeyValue("")

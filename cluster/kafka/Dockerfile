@@ -9,9 +9,9 @@ RUN apt-get update && \
 
 ## Add Kafka to the image
 ENV SCALA_VERSION 2.12
-ENV KAFKA_VERSION 2.2.0
+ENV KAFKA_VERSION 2.8.1
 ENV KAFKA_HOME /opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}
-ENV KAFKA_DOWNLOAD_URL http://apache.mirrors.nublue.co.uk/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz
+ENV KAFKA_DOWNLOAD_URL https://mirrors.ukfast.co.uk/sites/ftp.apache.org/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz
 env KAFKA_TMP /tmp/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz
 
 RUN echo "Installing Kafka from ${KAFKA_DOWNLOAD_URL}" && \
